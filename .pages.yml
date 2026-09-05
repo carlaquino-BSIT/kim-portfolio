@@ -1,0 +1,56 @@
+media:
+  - name: projects
+    label: Project Images
+    input: public/uploads/projects
+    output: /uploads/projects
+    extensions: [webp, png, jpg, jpeg]
+    categories: [image]
+    rename: false
+
+content:
+  - name: projects
+    label: Projects
+    type: file
+    path: content/projects.json
+    format: json
+
+    fields:
+      - name: projects
+        label: Projects
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+
+        fields:
+          - name: title
+            label: Project Title
+            type: string
+            required: true
+
+          - name: categories
+            label: Project Categories
+            type: select
+            required: false
+            options:
+              multiple: true
+              values:
+                - "Web Dev/UI/UX"
+                - "Promotional"
+                - "Graphics"
+                - "Mockups"
+                - "Logo"
+                - "Presentation"
+
+          - name: image
+            label: Project Image
+            type: image
+            required: true
+            options:
+              media: projects
+
+          - name: url
+            label: Website URL
+            type: string
+            required: false
