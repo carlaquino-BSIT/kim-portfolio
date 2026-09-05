@@ -1,0 +1,13 @@
+{
+  "projects": [
+    {
+      "title": "UKT",
+      "categories": [
+        "Web Dev/UI/UX"
+      ],
+      "image": "/uploads/projects/depweb.webp",
+      "url": "https://universityofkratie.edu.kh/"
+    },
+    {}
+  ]
+}
