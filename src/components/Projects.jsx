@@ -9,10 +9,9 @@ import { GeistMono } from "geist/font/mono";
 // DATA
 // =====================================================
 
-import projectsData from "@/content/projects.json";
+import projectsData from "../../content/projects.json";
 
-// CMS DATA
-const projects = projectsData.projects;
+const projects = projectsData.projects || [];
 
 // =====================================================
 // COMPONENT
@@ -57,7 +56,7 @@ export default function Projects() {
 
   // =====================================================
   // OPEN MODAL
-  // Only used for projects without a URL
+  // Only for projects without a URL
   // =====================================================
 
   const openProject = (project) => {
@@ -105,8 +104,6 @@ export default function Projects() {
             data-aos-duration="800"
             className="grid grid-cols-1 gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20"
           >
-            {/* LEFT */}
-
             <div>
               <div className="flex items-center gap-3">
                 <span className="h-px w-8 bg-[var(--green)] sm:w-10" />
@@ -171,6 +168,7 @@ export default function Projects() {
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {visibleProjects.map((project, index) => {
               const isWebsite = Boolean(project.url);
+              const hasImage = Boolean(project.image);
 
               return (
                 <article
@@ -182,7 +180,6 @@ export default function Projects() {
                 >
                   {/* =================================================
                       WEBSITE PROJECT
-                      Direct link
                   ================================================= */}
 
                   {isWebsite ? (
@@ -193,24 +190,32 @@ export default function Projects() {
                       className="block w-full cursor-pointer text-left"
                     >
                       <div className="relative overflow-hidden bg-neutral-100">
-                        <Image
-                          src={project.image}
-                          alt={project.title}
-                          width={1200}
-                          height={900}
-                          className="
-                            block
-                            aspect-[4/3]
-                            w-full
-                            object-cover
-                            transition-transform
-                            duration-700
-                            ease-out
-                            group-hover:scale-[1.025]
-                          "
-                        />
-
-                        {/* SUBTLE OVERLAY */}
+                        {hasImage ? (
+                          <Image
+                            src={project.image}
+                            alt={project.title}
+                            width={1200}
+                            height={900}
+                            className="
+                              block
+                              aspect-[4/3]
+                              w-full
+                              object-cover
+                              transition-transform
+                              duration-700
+                              ease-out
+                              group-hover:scale-[1.025]
+                            "
+                          />
+                        ) : (
+                          <div className="flex aspect-[4/3] w-full items-center justify-center bg-neutral-100">
+                            <span
+                              className={`${GeistMono.className} text-[9px] uppercase tracking-[0.15em] text-neutral-400`}
+                            >
+                              No Image
+                            </span>
+                          </div>
+                        )}
 
                         <div
                           className="
@@ -225,35 +230,47 @@ export default function Projects() {
                       </div>
                     </a>
                   ) : (
-                    /* =================================================
-                       NON-WEBSITE PROJECT
-                       Opens modal
-                    ================================================= */
+                    // =================================================
+                    // IMAGE-ONLY PROJECT
+                    // =================================================
 
                     <button
                       type="button"
-                      onClick={() => openProject(project)}
+                      onClick={() => {
+                        if (hasImage) {
+                          openProject(project);
+                        }
+                      }}
                       className="block w-full cursor-pointer text-left"
+                      disabled={!hasImage}
                     >
                       <div className="relative overflow-hidden bg-neutral-100">
-                        <Image
-                          src={project.image}
-                          alt={project.title}
-                          width={1200}
-                          height={900}
-                          className="
-                            block
-                            aspect-[4/3]
-                            w-full
-                            object-cover
-                            transition-transform
-                            duration-700
-                            ease-out
-                            group-hover:scale-[1.025]
-                          "
-                        />
-
-                        {/* SUBTLE OVERLAY */}
+                        {hasImage ? (
+                          <Image
+                            src={project.image}
+                            alt={project.title}
+                            width={1200}
+                            height={900}
+                            className="
+                              block
+                              aspect-[4/3]
+                              w-full
+                              object-cover
+                              transition-transform
+                              duration-700
+                              ease-out
+                              group-hover:scale-[1.025]
+                            "
+                          />
+                        ) : (
+                          <div className="flex aspect-[4/3] w-full items-center justify-center bg-neutral-100">
+                            <span
+                              className={`${GeistMono.className} text-[9px] uppercase tracking-[0.15em] text-neutral-400`}
+                            >
+                              No Image
+                            </span>
+                          </div>
+                        )}
 
                         <div
                           className="
@@ -270,24 +287,27 @@ export default function Projects() {
                   )}
 
                   {/* =================================================
-                      PROJECT TITLE
+                      PROJECT INFO
+                      ONLY FOR WEBSITE PROJECTS
                   ================================================= */}
 
-                  <div className="mt-3">
-                    <h3 className="font-body text-sm font-medium tracking-tight text-black">
-                      {project.title}
-                    </h3>
+                  {isWebsite && (
+                    <div className="mt-3">
+                      <h3 className="font-body text-sm font-medium tracking-tight text-black">
+                        {project.title}
+                      </h3>
 
-                    <div className="mt-1 flex items-center gap-2">
-                      <span className="h-px w-4 bg-[var(--green)]" />
+                      <div className="mt-1 flex items-center gap-2">
+                        <span className="h-px w-4 bg-[var(--green)]" />
 
-                      <span
-                        className={`${GeistMono.className} text-[9px] uppercase tracking-[0.12em] text-neutral-400`}
-                      >
-                        {project.categories?.join(" / ")}
-                      </span>
+                        <span
+                          className={`${GeistMono.className} text-[9px] uppercase tracking-[0.12em] text-neutral-400`}
+                        >
+                          {project.categories?.join(" / ")}
+                        </span>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </article>
               );
             })}
@@ -364,15 +384,37 @@ export default function Projects() {
 
       {/* =====================================================
           PROJECT MODAL
-          ONLY FOR NON-WEBSITE PROJECTS
+          IMAGE ONLY
+          CLOSE BUTTON ONLY
       ===================================================== */}
 
       {selectedProject && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm sm:p-6">
+        <div
+          className="
+            fixed
+            inset-0
+            z-[100]
+            flex
+            items-center
+            justify-center
+            overflow-hidden
+            bg-black/70
+            p-4
+            backdrop-blur-sm
+            sm:p-6
+          "
+        >
           <div
             data-aos="zoom-in"
             data-aos-duration="400"
-            className="relative max-h-[92vh] w-full max-w-5xl overflow-hidden bg-white"
+            className="
+              relative
+              flex
+              max-h-[92vh]
+              max-w-5xl
+              items-center
+              justify-center
+            "
           >
             {/* =================================================
                 CLOSE BUTTON
@@ -384,8 +426,8 @@ export default function Projects() {
               aria-label="Close project"
               className="
                 absolute
-                right-4
-                top-4
+                right-3
+                top-3
                 z-10
                 flex
                 h-9
@@ -404,18 +446,22 @@ export default function Projects() {
             </button>
 
             {/* =================================================
-                IMAGE ONLY
+                IMAGE
+                No scroll
             ================================================= */}
 
-            <div className="max-h-[92vh] overflow-auto bg-neutral-100">
-              <Image
-                src={selectedProject.image}
-                alt={selectedProject.title}
-                width={1600}
-                height={1200}
-                className="block h-auto w-full object-contain"
-              />
-            </div>
+            <Image
+              src={selectedProject.image}
+              alt={selectedProject.title}
+              width={1600}
+              height={1200}
+              className="
+                block
+                max-h-[92vh]
+                max-w-full
+                object-contain
+              "
+            />
           </div>
         </div>
       )}

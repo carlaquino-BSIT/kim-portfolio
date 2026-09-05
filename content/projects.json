@@ -1,13 +1,352 @@
 {
   "projects": [
     {
-      "title": "UKT",
+      "title": "Defense Expo PHL",
       "categories": [
         "Web Dev/UI/UX"
       ],
       "image": "/uploads/projects/depweb.webp",
-      "url": "https://universityofkratie.edu.kh/"
+      "url": "https://defenseexpophl.com/drone-warfare-summit-2025/"
     },
-    {}
+    {
+      "title": "University of Kratie",
+      "categories": [
+        "Web Dev/UI/UX"
+      ],
+      "image": "/uploads/projects/ukt.webp",
+      "url": "https://universityofkratie.edu.kh/home"
+    },
+    {
+      "title": "RDD Marketing",
+      "categories": [
+        "Web Dev/UI/UX"
+      ],
+      "image": "/uploads/projects/rdd.webp",
+      "url": "https://rachelsdigitaldesk.github.io/"
+    },
+    {
+      "title": "SIBOL Website",
+      "categories": [
+        "Web Dev/UI/UX"
+      ],
+      "image": "/uploads/projects/sibol.webp",
+      "url": "https://ieatsolutions.com/projectsibol/"
+    },
+    {
+      "title": "TimbangApp",
+      "categories": [
+        "Web Dev/UI/UX"
+      ],
+      "image": "/uploads/projects/TA.webp",
+      "url": "https://ieatsolutions.com/timbangapp/"
+    },
+    {
+      "title": "Promotional Design 01",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/pr1.webp"
+    },
+    {
+      "title": "Promotional Design 02",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/pr2.webp"
+    },
+    {
+      "title": "MN+LA Brand",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/pr3.webp"
+    },
+    {
+      "title": "Promotional Design 04",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/pr4.webp"
+    },
+    {
+      "title": "Drone Warfare Summit",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/dws2.webp"
+    },
+    {
+      "title": "Marketing Visual 01",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/mo3.1.webp"
+    },
+    {
+      "title": "Promotional Material 01",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/invi1.webp"
+    },
+    {
+      "title": "Promotional Material 02",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/invi2.webp"
+    },
+    {
+      "title": "Promotional Material 03",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/invi3.webp"
+    },
+    {
+      "title": "Promotional Material 04",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/invi5.webp"
+    },
+    {
+      "title": "Campaign Design 01",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/j1.webp"
+    },
+    {
+      "title": "Campaign Design 02",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/j2.webp"
+    },
+    {
+      "title": "Campaign Design 03",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/j3.webp"
+    },
+    {
+      "title": "Campaign Design 04",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/j4.webp"
+    },
+    {
+      "title": "Creative Material 01",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/004.webp"
+    },
+    {
+      "title": "Creative Material 02",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/005.webp"
+    },
+    {
+      "title": "Information Design 01",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/info1.webp"
+    },
+    {
+      "title": "Information Design 02",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/info2.webp"
+    },
+    {
+      "title": "Information Design 03",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/info3.webp"
+    },
+    {
+      "title": "Information Design 04",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/info4.webp"
+    },
+    {
+      "title": "Information Design 05",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/info5.webp"
+    },
+    {
+      "title": "Information Design 06",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/info6.webp"
+    },
+    {
+      "title": "Information Design 07",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/info7.webp"
+    },
+    {
+      "title": "Creative Material 03",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/003.webp"
+    },
+    {
+      "title": "Creative Material 04",
+      "categories": [
+        "Promotional"
+      ],
+      "image": "/uploads/projects/002.webp"
+    },
+    {
+      "title": "Logo Design 01",
+      "categories": [
+        "Logo"
+      ],
+      "image": "/uploads/projects/lg10.webp"
+    },
+    {
+      "title": "Logo Design 02",
+      "categories": [
+        "Logo"
+      ],
+      "image": "/uploads/projects/lg1.webp"
+    },
+    {
+      "title": "Logo Design 03",
+      "categories": [
+        "Logo"
+      ],
+      "image": "/uploads/projects/lg2.webp"
+    },
+    {
+      "title": "Logo Design 04",
+      "categories": [
+        "Logo"
+      ],
+      "image": "/uploads/projects/lg3.webp"
+    },
+    {
+      "title": "Logo Design 05",
+      "categories": [
+        "Logo"
+      ],
+      "image": "/uploads/projects/lg4.webp"
+    },
+    {
+      "title": "Logo Design 06",
+      "categories": [
+        "Logo"
+      ],
+      "image": "/uploads/projects/lg5.webp"
+    },
+    {
+      "title": "Logo Design 07",
+      "categories": [
+        "Logo"
+      ],
+      "image": "/uploads/projects/lg6.webp"
+    },
+    {
+      "title": "Logo Design 08",
+      "categories": [
+        "Logo"
+      ],
+      "image": "/uploads/projects/lg7.webp"
+    },
+    {
+      "title": "Logo Design 09",
+      "categories": [
+        "Logo"
+      ],
+      "image": "/uploads/projects/lg8.webp"
+    },
+    {
+      "title": "Presentation Design 01",
+      "categories": [
+        "Presentation"
+      ],
+      "image": "/uploads/projects/pt9.webp"
+    },
+    {
+      "title": "Presentation Design 02",
+      "categories": [
+        "Presentation"
+      ],
+      "image": "/uploads/projects/pt8.1.webp"
+    },
+    {
+      "title": "Presentation Design 03",
+      "categories": [
+        "Presentation"
+      ],
+      "image": "/uploads/projects/pt1.webp"
+    },
+    {
+      "title": "Presentation Design 04",
+      "categories": [
+        "Presentation"
+      ],
+      "image": "/uploads/projects/pt2.webp"
+    },
+    {
+      "title": "Presentation Design 05",
+      "categories": [
+        "Presentation"
+      ],
+      "image": "/uploads/projects/pt3.webp"
+    },
+    {
+      "title": "Presentation Design 06",
+      "categories": [
+        "Presentation"
+      ],
+      "image": "/uploads/projects/pt4.webp"
+    },
+    {
+      "title": "Presentation Design 07",
+      "categories": [
+        "Presentation"
+      ],
+      "image": "/uploads/projects/pt5.webp"
+    },
+    {
+      "title": "Presentation Design 08",
+      "categories": [
+        "Presentation"
+      ],
+      "image": "/uploads/projects/pt6.webp"
+    },
+    {
+      "title": "Presentation Design 09",
+      "categories": [
+        "Presentation"
+      ],
+      "image": "/uploads/projects/pt7.webp"
+    },
+    {
+      "title": "Presentation Design 10",
+      "categories": [
+        "Presentation"
+      ],
+      "image": "/uploads/projects/001.webp"
+    }
   ]
 }
