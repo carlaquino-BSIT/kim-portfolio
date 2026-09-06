@@ -155,18 +155,6 @@ export default function Hero() {
                 className="object-cover"
               />
             </div>
-
-            {/* IMAGE LABEL */}
-
-            <div className="absolute -bottom-3 -left-3 flex items-center gap-2 bg-white px-3 py-2 shadow-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-[var(--green)]" />
-
-              <span
-                className={`${GeistMono.className} text-[8px] uppercase tracking-[0.15em] text-neutral-500`}
-              >
-                Creative Portfolio
-              </span>
-            </div>
           </div>
         </div>
 
