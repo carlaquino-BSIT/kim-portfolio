@@ -173,7 +173,7 @@ export default function Navbar() {
                   onClick={() =>
                     scrollToSection(item.target)
                   }
-                  className={`group relative px-4 py-2 font-mono text-[10px] uppercase tracking-[0.12em] transition-colors duration-300 ${
+                  className={`group relative px-4 py-2 cursor-pointer font-mono text-[10px] uppercase tracking-[0.12em] transition-colors duration-300 ${
                     active
                       ? "text-[var(--green)]"
                       : "text-neutral-500 hover:text-black"
